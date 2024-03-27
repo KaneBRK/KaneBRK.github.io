@@ -1,0 +1,206 @@
+/* Styles généraux */
+body {
+    font-family: 'Helvetica', sans-serif; /* Utilisation de la police de caractères Helvetica */
+    background-color: #f5f5f5; /* Blanc légèrement teinté */
+    color: #333333; /* Noir */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e0e0e0; /* Gris clair */
+    color: #333333; /* Noir */
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #dcdcdc; /* Gris très clair */
+    padding: 10px 0; /* Ajoute un peu de marge en haut et en bas */
+    width: 100%; /* S'étend sur toute la largeur de la page */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Utilisation de flexbox pour étaler les onglets */
+    justify-content: space-between; /* Répartit les onglets sur toute la largeur */
+}
+
+nav ul li {
+    flex-grow: 1; /* Permet à chaque élément d'onglet de prendre autant d'espace que possible */
+    text-align: center; /* Centre le texte à l'intérieur de chaque onglet */
+    position: relative; /* Positionnement relatif pour ajouter des mini-barres */
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position la barre en dessous du texte */
+    left: 50%; /* Décale la barre horizontalement */
+    transform: translateX(-50%); /* Centre la barre par rapport au texte */
+    width: 0; /* Largeur initiale de la barre */
+    height: 1px; /* Hauteur de la barre */
+    background-color: darkgray; /* Couleur de la barre */
+    transition: width 0.3s ease; /* Transition fluide pour la largeur */
+}
+
+nav ul li:hover::after {
+    width: 100%; /* Largeur augmentée au survol */
+}
+
+nav ul li a {
+    color: #333333; /* Noir */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition en douceur pour la couleur */
+}
+
+nav ul li a:hover {
+    color: darkgray;
+}
+
+#cv {
+    padding: 20px;
+    max-width: 800px; /* Largeur maximale pour le contenu du CV */
+    margin: 0 auto; /* Centrage horizontal */
+    border-radius: 15px; /* Bordures arrondies */
+    background-color: #ffffff; /* Fond blanc */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+footer {
+    background-color: #dcdcdc; /* Gris très clair */
+    color: #333333; /* Noir */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Styles pour la section de profil dans le CV */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%; /* Pour créer une forme de cercle */
+    margin: 0 20px 20px 0; /* Espacement en bas et à droite */
+    float: left; /* Alignement à gauche */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadrer l'image pour qu'elle remplisse le conteneur tout en préservant son ratio */
+}
+
+.cv-section {
+    margin-bottom: 40px; /* Espacement entre les sections */
+    margin-top: 40px; /* Décalage vers le bas */
+}
+
+.cv-section h2,
+.cv-section h3,
+.cv-section h4 {
+    font-size: 28px; /* Augmentation de la taille des titres des sections */
+}
+
+.cv-section h2 {
+    margin-bottom: 10px; /* Espacement en bas du titre principal */
+}
+
+.cv-section h3 {
+    font-size: 22px; /* Réduction de la taille des titres h3 */
+    margin-top: 20px; /* Espacement en haut des sous-titres */
+}
+
+.cv-section ul {
+    margin-bottom: 20px; /* Espacement en bas de la liste */
+}
+
+.cv-section p {
+    margin-bottom: 10px; /* Espacement en bas des paragraphes */
+}
+
+/* Styles pour les barres entre les sections */
+hr {
+    border: none;
+    border-top: 1px solid #333333; /* Couleur de la barre */
+    margin: 20px 0; /* Espacement autour de la barre */
+}
+
+/* Styles pour les compétences */
+.cv-section:nth-child(4) ul {
+    font-size: 16px; /* Taille de police pour les compétences */
+    color: #333333; /* Noir */
+}
+
+/* Styles pour le bouton de téléchargement */
+.cv-download-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dcdcdc; /* Gris très clair */
+    color: #333333; /* Noir */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv-download-button:hover {
+    background-color: #e0e0e0; /* Gris foncé au survol */
+}
+
+/* Styles spécifiques pour la page de connexion */
+#login {
+    max-width: 400px; /* Largeur maximale pour la section de connexion */
+    margin: 50px auto; /* Centrage horizontal avec une marge supérieure */
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px; /* Ajout de marge intérieure */
+    font-family: 'Helvetica', sans-serif; /* Utilisation de la police de caractères Helvetica */
+    color: #333333; /* Noir */
+}
+
+#login h1 {
+    text-align: center; /* Centrer le titre */
+}
+
+#login form {
+    margin-top: 20px; /* Espacement entre le titre et le formulaire */
+}
+
+#login label {
+    display: block; /* Afficher les étiquettes sur une ligne différente */
+    margin-bottom: 5px; /* Espacement entre les étiquettes */
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    width: calc(100% - 10px); /* Largeur du champ de texte moins la marge */
+    padding: 10px; /* Ajout de remplissage pour un meilleur espacement */
+    margin-bottom: 20px; /* Espacement entre les champs de texte */
+    border: 1px solid #ccc; /* Bordure grise autour des champs de texte */
+    border-radius: 5px; /* Coins arrondis pour les champs de texte */
+}
+
+#login button[type="submit"] {
+    width: 100%; /* Remplissage total */
+    padding: 10px; /* Espacement du bouton */
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: #ffffff; /* Couleur du texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de souris pointer */
+    transition: background-color 0.3s ease; /* Transition en douceur pour la couleur de fond */
+}
+
+#login button[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+#login .error-message {
+    color: #ff0000; /* Couleur rouge pour les messages d'erreur */
+    margin-top: 10px; /* Espacement au-dessus du message d'erreur */
+}
