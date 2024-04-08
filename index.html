@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Accueil</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Accueil</h1>
-    </header>
-    <nav>
-        <ul>
-            <li id="name"><a href="index.html">Kane Berkhout</a></li>
-            <li class="nav-right"><a href="apropos.html">À propos</a></li>
-            <li class="nav-right"><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section>
-        <h2>Bienvenue sur mon CV en ligne</h2>
-        <div class="container">
-            <div class="flex-container">
-                <img src="images/photo_cv.jpg" alt="Kane Berkhout" class="cropped-image">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <div class="logo">Kane Berkhout</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="prenom-naissance">
-                <p>Kane Berkhout</p>
-                <p>26 Juillet 2002</p>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Kane Berkhout</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
             </div>
-        </div>        
-    </section>
-</body>
+        </nav>
+        <script src="script.js"></script>
+    </body>
 </html>
